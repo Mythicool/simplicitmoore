@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-steel-800;
+  }
+
+  body {
+    @apply bg-obsidian-950 text-steel-100 antialiased;
+    font-family: 'Inter', 'Sora', 'Manrope', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .liquid-glass {
+    @apply bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .liquid-glass-hover {
+    @apply hover:from-white/10 hover:to-white/5 hover:border-neon-cyan/30 transition-all duration-300;
+  }
+
+  .neon-border {
+    @apply border border-neon-cyan/50 shadow-neon-sm;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-steel-100 via-white to-steel-100 bg-clip-text text-transparent;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  }
+}
